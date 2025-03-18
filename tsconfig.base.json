@@ -20,7 +20,9 @@
       }
     ],
     "paths": {
-      "@demo/shared": ["tools/demo/index.ts"]
+      "@demo/shared": ["tools/demo/index.ts"],
+      "@gtsa/*": ["packages/*"],
+      "@gtsa/simple-socket-client": ["packages/simple-socket-client/index.d.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

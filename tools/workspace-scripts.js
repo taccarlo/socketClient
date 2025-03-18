@@ -55,12 +55,19 @@ module.exports = {
       },
     },
     '⚙️': {
-      script: `npx cowsay "@nativescript/* packages will keep your ⚙️ cranking"`,
-      description: '_____________  @nativescript/*  _____________',
+      script: `npx cowsay "@gtsa/* packages will keep your ⚙️ cranking"`,
+      description: '_____________  @gtsa/*  _____________',
     },
     // packages
     // build output is always in dist/packages
-    '@nativescript': {
+    '@gtsa': {
+      // @gtsa/simple-socket-client
+      'simple-socket-client': {
+        build: {
+          script: 'nx run simple-socket-client:build.all',
+          description: '@gtsa/simple-socket-client: Build',
+        },
+      },
       'build-all': {
         script: 'nx run-many --target=build.all --all',
         description: 'Build all packages',
@@ -71,6 +78,10 @@ module.exports = {
       description: '_____________  Focus (VS Code supported)  _____________',
     },
     focus: {
+      'simple-socket-client': {
+        script: 'nx run simple-socket-client:focus',
+        description: 'Focus on @gtsa/simple-socket-client',
+      },
       reset: {
         script: 'nx g @nativescript/plugin-tools:focus-packages',
         description: 'Reset Focus',

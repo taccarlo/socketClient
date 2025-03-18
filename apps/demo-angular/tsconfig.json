@@ -3,7 +3,9 @@
   "compilerOptions": {
     "paths": {
       "~/*": ["src/*"],
-      "@demo/shared": ["tools/demo/index.ts"]
+      "@demo/shared": ["tools/demo/index.ts"],
+      "@gtsa/*": ["../../dist/packages/*"],
+      "@gtsa/simple-socket-client": ["../../packages/simple-socket-client/index.d.ts"]
     }
   },
   "files": ["./references.d.ts", "./src/main.ts", "./src/polyfills.ts"],
